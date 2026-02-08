@@ -26,6 +26,16 @@ All three frontend cards can be installed through HACS under **Frontend**.
 
 ### 1. Install the custom component
 
+#### HACS (Recommended)
+
+1. Open HACS in your HA instance
+2. Go to **Integrations** > three-dot menu > **Custom repositories**
+3. Add `https://github.com/PersephoneKarnstein/ha-citizen-incidents` with category **Integration**
+4. Search for "Citizen Incidents" and install
+5. Restart Home Assistant
+
+#### Manual
+
 Copy the `custom_components/citizen/` directory into your Home Assistant config directory:
 
 ```
