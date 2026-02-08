@@ -1,0 +1,17 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Citizen Incidents",
+        "description": "Configure the area to monitor for Citizen incidents. Defaults to your Home Assistant home location.",
+        "data": {
+          "latitude": "Latitude",
+          "longitude": "Longitude",
+          "radius_km": "Radius (km)",
+          "scan_interval": "Update interval (seconds)",
+          "max_incidents": "Maximum incidents"
+        }
+      }
+    }
+  }
+}

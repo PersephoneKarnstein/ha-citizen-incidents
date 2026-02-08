@@ -1,0 +1,74 @@
+type: custom:auto-entities
+filter:
+  include:
+    - domain: geo_location
+      attributes:
+        recency_tier: critical
+      options:
+        display: icon
+        size: 48
+        color: "rgba(160,0,255,0.9)"
+    - domain: geo_location
+      attributes:
+        recency_tier: recent
+      options:
+        display: icon
+        size: 42
+        color: "rgba(255,0,0,0.85)"
+    - domain: geo_location
+      attributes:
+        recency_tier: moderate
+      options:
+        display: icon
+        size: 36
+        color: "rgba(255,120,0,0.7)"
+    - domain: geo_location
+      attributes:
+        recency_tier: aging
+      options:
+        display: icon
+        size: 30
+        color: "rgba(255,200,0,0.6)"
+    - domain: geo_location
+      attributes:
+        recency_tier: old
+      options:
+        display: icon
+        size: 24
+        color: "rgba(140,140,140,0.5)"
+entities:
+  - entity: zone.home
+    display: icon
+    icon: mdi:home
+    size: 40
+    color: "#4FC3F7"
+    z_index_offset: 1000
+card:
+  type: custom:map-card
+  zoom: 16
+  card_size: 8
+  x: 40.7580
+  y: -73.9855
+  tile_layer_url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+  tile_layer_attribution: "&copy; OpenStreetMap"
+  card_mod:
+    style: |
+      ha-card {
+        position: relative;
+      }
+      ha-card::after {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        z-index: 999;
+        background: rgba(0, 0, 0, 0.75);
+        padding: 8px 12px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-family: sans-serif;
+        line-height: 2;
+        white-space: pre;
+        color: #ccc;
+        pointer-events: none;
+        content: "🟣 < 30 min\A🔴 30 min – 2 hr\A🟠 2 – 12 hr\A🟡 12 hr – 2 days\A🩶 2+ days";
+      }

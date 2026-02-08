@@ -1,0 +1,16 @@
+{
+  "domain": "citizen",
+  "name": "Citizen Incidents",
+  "codeowners": [
+    "@PersephoneKarnstein"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/PersephoneKarnstein/ha-citizen-incidents",
+  "iot_class": "cloud_polling",
+  "requirements": [
+    "aiohttp"
+  ],
+  "version": "1.0.0",
+  "issue_tracker": "https://github.com/PersephoneKarnstein/ha-citizen-incidents/issues"
+}
